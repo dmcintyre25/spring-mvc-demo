@@ -10,5 +10,10 @@ public class HomeController {
 	public String ShowPage() {
 		return "main-menu";
 	}
+	
+	@RequestMapping("/processForm")
+	public String ProcessForm() {
+		return "helloworld";
+	}
 
 }
