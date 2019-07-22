@@ -1,6 +1,9 @@
 package com.devworld.springdemo.mvc;
 
 import javax.validation.constraints.Size;
+
+import com.devworld.springdemo.validation.CourseCode;
+
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -23,12 +26,27 @@ public class Customer {
 	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="Must be 5 letters/numbers")
 	private String postalCode;
 	
+	@CourseCode(value="DAN", message="WHERE IS DAN?")
+	private String courseCode;
+	
 	public Customer() {
 		
 	}
 	
 	
 	
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
+
+
+
 	public String getPostalCode() {
 		return postalCode;
 	}
